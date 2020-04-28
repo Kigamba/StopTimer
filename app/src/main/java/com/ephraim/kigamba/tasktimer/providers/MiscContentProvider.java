@@ -169,7 +169,7 @@ public class MiscContentProvider extends ContentProvider {
 		public static final Uri CONTENT_URI = Uri.parse("content://"
 				+ MiscContentProvider.AUTHORITY + "/misc");
 
-		public static final String CONTENT_TYPE = "vnd.android.cursor.dir/vnd.synappze.stoptimer";
+		public static final String CONTENT_TYPE = "vnd.android.cursor.dir/vnd.ephraim.kigamba.tasktimer";
 		
 		public static final String MISC_ID = "_id";
 
