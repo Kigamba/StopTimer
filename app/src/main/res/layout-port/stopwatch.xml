@@ -98,19 +98,6 @@
                 android:src="@drawable/left"/>
         </FrameLayout>
 
-        <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:layout_weight="1">
-
-            <ImageButton
-                android:id="@+id/swRightImageButton"
-                android:layout_width="32dip"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right|center_vertical"
-                android:src="@drawable/right"/>
-        </FrameLayout>
-
         <TableLayout
             android:id="@+id/swTableLayout3"
             android:layout_width="wrap_content"
@@ -130,7 +117,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
-                    android:background="@drawable/time_bg"
                     android:orientation="vertical"
                     android:paddingTop="3dip">
 
@@ -139,29 +125,11 @@
                         android:layout_height="wrap_content">
 
                         <TextView
-                            android:id="@+id/swDaysBGTextView"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="00"
-                            android:textColor="@color/blur"
-                            android:textSize="30dip"/>
-
-                        <TextView
-                            android:id="@+id/swDaysBG2TextView"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="88"
-                            android:textColor="@color/blur"
-                            android:textSize="30dip"/>
-
-                        <TextView
                             android:id="@+id/swDaysTextView"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="00"
-                            android:textColor="@color/white"
+                            android:textColor="@color/gray"
                             android:textSize="30dip"/>
                     </FrameLayout>
 
@@ -174,11 +142,18 @@
                         android:textSize="10dip"/>
                 </LinearLayout>
 
+				<TextView
+					android:id="@+id/swTextView15"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center"
+					android:text=":"
+					android:textSize="45dip"/>
+
                 <LinearLayout
                     android:id="@+id/swHrsLinearLayout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/time_bg"
                     android:orientation="vertical"
                     android:paddingTop="3dip">
 
@@ -187,29 +162,11 @@
                         android:layout_height="wrap_content">
 
                         <TextView
-                            android:id="@+id/swHrsBGTextView"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="00"
-                            android:textColor="@color/blur"
-                            android:textSize="45dip"/>
-
-                        <TextView
-                            android:id="@+id/swHrsBG2TextView"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="88"
-                            android:textColor="@color/blur"
-                            android:textSize="45dip"/>
-
-                        <TextView
                             android:id="@+id/swHrsTextView"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="00"
-                            android:textColor="@color/white"
+                            android:textColor="@color/gray"
                             android:textSize="45dip"/>
                     </FrameLayout>
 
@@ -221,11 +178,18 @@
                         android:text="hrs"/>
                 </LinearLayout>
 
+				<TextView
+					android:id="@+id/swTextView13"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center"
+					android:text=":"
+					android:textSize="45dip"/>
+
                 <LinearLayout
                     android:id="@+id/swMinsLinearLayout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/time_bg"
                     android:orientation="vertical"
                     android:paddingTop="3dip">
 
@@ -234,29 +198,11 @@
                         android:layout_height="wrap_content">
 
                         <TextView
-                            android:id="@+id/swMinsBGTextView"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="00"
-                            android:textColor="@color/blur"
-                            android:textSize="45dip"/>
-
-                        <TextView
-                            android:id="@+id/swMinsBG2TextView"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="88"
-                            android:textColor="@color/blur"
-                            android:textSize="45dip"/>
-
-                        <TextView
                             android:id="@+id/swMinsTextView"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="00"
-                            android:textColor="@color/white"
+                            android:textColor="@color/gray"
                             android:textSize="45dip"/>
                     </FrameLayout>
 
@@ -268,11 +214,18 @@
                         android:text="mins"/>
                 </LinearLayout>
 
+				<TextView
+					android:id="@+id/swTextView11"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center"
+					android:text=":"
+					android:textSize="45dip"/>
+
                 <LinearLayout
                     android:id="@+id/swSecsLinearLayout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/time_bg"
                     android:orientation="vertical"
                     android:paddingTop="3dip">
 
@@ -281,29 +234,11 @@
                         android:layout_height="wrap_content">
 
                         <TextView
-                            android:id="@+id/swSecsBGTextView"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="00"
-                            android:textColor="@color/blur"
-                            android:textSize="45dip"/>
-
-                        <TextView
-                            android:id="@+id/swSecsBG2TextView"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="88"
-                            android:textColor="@color/blur"
-                            android:textSize="45dip"/>
-
-                        <TextView
                             android:id="@+id/swSecsTextView"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="00"
-                            android:textColor="@color/white"
+                            android:textColor="@color/gray"
                             android:textSize="45dip"/>
                     </FrameLayout>
 
@@ -315,12 +250,19 @@
                         android:text="secs"/>
                 </LinearLayout>
 
+				<TextView
+					android:id="@+id/swTextView17"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center"
+					android:text="."
+					android:textSize="45dip"/>
+
                 <LinearLayout
                     android:id="@+id/swTenthsLinearLayout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
-                    android:background="@drawable/time_bg"
                     android:orientation="vertical"
                     android:paddingTop="3dip">
 
@@ -329,29 +271,11 @@
                         android:layout_height="wrap_content">
 
                         <TextView
-                            android:id="@+id/swTenthsBGTextView"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="00"
-                            android:textColor="@color/blur"
-                            android:textSize="30dip"/>
-
-                        <TextView
-                            android:id="@+id/swTenthsBG2TextView"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="88"
-                            android:textColor="@color/blur"
-                            android:textSize="30dip"/>
-
-                        <TextView
                             android:id="@+id/swTenthsTextView"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="00"
-                            android:textColor="@color/white"
+                            android:textColor="@color/gray"
                             android:textSize="30dip"/>
                     </FrameLayout>
 
@@ -364,39 +288,23 @@
                         android:textSize="10dip"/>
                 </LinearLayout>
 
-                <TextView
-                    android:id="@+id/swTextView15"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text=":"
-                    android:textSize="45dip"/>
-
-                <TextView
-                    android:id="@+id/swTextView13"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text=":"
-                    android:textSize="45dip"/>
-
-                <TextView
-                    android:id="@+id/swTextView17"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="."
-                    android:textSize="45dip"/>
-
-                <TextView
-                    android:id="@+id/swTextView11"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text=":"
-                    android:textSize="45dip"/>
             </TableRow>
         </TableLayout>
+
+		<FrameLayout
+			android:layout_width="wrap_content"
+			android:layout_height="fill_parent"
+			android:layout_gravity="right"
+			android:layout_weight="1">
+
+			<ImageButton
+				android:id="@+id/swRightImageButton"
+				android:layout_width="32dip"
+				android:layout_height="wrap_content"
+				android:layout_gravity="right|center_vertical"
+				android:src="@drawable/right"/>
+		</FrameLayout>
+
     </LinearLayout>
 
     <LinearLayout
