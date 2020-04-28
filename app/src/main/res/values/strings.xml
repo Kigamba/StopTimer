@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="business_name">SynAppze</string>
+    <string name="business_name">Task Timer</string>
     <string name="app_name">StopTimer</string>
     <string name="app_version_name">1.2.0</string>
     <string name="date_time_format">hh:mm:ssa MM/dd/yyyy</string>

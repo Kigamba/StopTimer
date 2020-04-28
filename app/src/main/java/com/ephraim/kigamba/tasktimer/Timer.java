@@ -242,7 +242,7 @@ public class Timer {
 		public static final Uri CONTENT_URI = Uri.parse("content://"
 				+ TimerContentProvider.AUTHORITY + "/timers");
 
-		public static final String CONTENT_TYPE = "vnd.android.cursor.dir/vnd.synappze.stoptimer";
+		public static final String CONTENT_TYPE = "vnd.android.cursor.dir/vnd.ephraim.kigamba.tasktimer";
 		
 		public static final String TIMER_ID = "_id";
 		

@@ -40,7 +40,7 @@ import java.util.UUID;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String PREFS_NAME = "SynappzeStopTimer";
+    public static final String PREFS_NAME = "TaskTimer";
     public static final int DISPLAY_UPDATE_INTERVAL = 50;
     public static final Uri TIMER_URI = Timer.Timers.CONTENT_URI;
     public static final Uri STOPWATCH_URI = Stopwatch.Stopwatches.CONTENT_URI;

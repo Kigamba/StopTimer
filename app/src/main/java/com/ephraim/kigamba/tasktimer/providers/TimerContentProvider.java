@@ -14,7 +14,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteQueryBuilder;
 import android.net.Uri;
 
-import com.synappze.stoptimer.R;
+import com.ephraim.kigamba.tasktimer.R;
 import com.ephraim.kigamba.tasktimer.Timer.Timers;
 
 
