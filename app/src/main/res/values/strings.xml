@@ -14,6 +14,5 @@
     <string name="keepScreenOnPrefDefaultValue">true</string>
     <string name="screenOrientationPrefDefaultValue">0</string>
 
-    <string name="admob_unit_id">ca-app-pub-3782968683928216/5487824283</string>
 
 </resources>
