@@ -1,4 +1,4 @@
-package com.synappze.stoptimer.receivers;
+package com.ephraim.kigamba.tasktimer.receivers;
 
 import android.app.ActivityManager;
 import android.content.BroadcastReceiver;
@@ -10,12 +10,11 @@ import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.PowerManager;
 import android.os.Vibrator;
-import android.util.Log;
 
-import com.synappze.stoptimer.MainActivity;
-import com.synappze.stoptimer.Timer;
-import com.synappze.stoptimer.Timer.Timers;
-import com.synappze.stoptimer.TimerActivity;
+import com.ephraim.kigamba.tasktimer.MainActivity;
+import com.ephraim.kigamba.tasktimer.Timer;
+import com.ephraim.kigamba.tasktimer.Timer.Timers;
+import com.ephraim.kigamba.tasktimer.TimerActivity;
 
 import java.io.IOException;
 import java.util.Date;

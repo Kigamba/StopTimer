@@ -1,9 +1,8 @@
-package com.synappze.stoptimer;
+package com.ephraim.kigamba.tasktimer;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import android.annotation.TargetApi;
 import android.app.AlarmManager;
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -16,10 +15,9 @@ import android.net.Uri;
 import android.os.Build;
 import android.provider.BaseColumns;
 import android.support.v4.content.ContextCompat;
-import android.util.Log;
 
-import com.synappze.stoptimer.providers.TimerContentProvider;
-import com.synappze.stoptimer.receivers.TimerExpiryBroadcastReceiver;
+import com.ephraim.kigamba.tasktimer.providers.TimerContentProvider;
+import com.ephraim.kigamba.tasktimer.receivers.TimerExpiryBroadcastReceiver;
 
 
 public class Timer {

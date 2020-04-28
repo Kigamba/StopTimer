@@ -1,4 +1,4 @@
-package com.synappze.stoptimer.receivers;
+package com.ephraim.kigamba.tasktimer.receivers;
 
 import java.util.Date;
 
@@ -9,9 +9,9 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 
-import com.synappze.stoptimer.MainActivity;
-import com.synappze.stoptimer.Timer;
-import com.synappze.stoptimer.Timer.Timers;
+import com.ephraim.kigamba.tasktimer.MainActivity;
+import com.ephraim.kigamba.tasktimer.Timer;
+import com.ephraim.kigamba.tasktimer.Timer.Timers;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
 

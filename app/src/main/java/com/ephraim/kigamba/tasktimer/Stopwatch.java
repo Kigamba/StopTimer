@@ -1,4 +1,4 @@
-package com.synappze.stoptimer;
+package com.ephraim.kigamba.tasktimer;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -6,7 +6,7 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.provider.BaseColumns;
 
-import com.synappze.stoptimer.providers.StopwatchContentProvider;
+import com.ephraim.kigamba.tasktimer.providers.StopwatchContentProvider;
 
 public class Stopwatch {
 

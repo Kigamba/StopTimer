@@ -1,4 +1,4 @@
-package com.synappze.stoptimer;
+package com.ephraim.kigamba.tasktimer;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -21,7 +21,6 @@ import android.text.Editable;
 import android.text.InputFilter;
 import android.text.Spanned;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -41,7 +40,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.synappze.stoptimer.Timer.Timers;
+import com.ephraim.kigamba.tasktimer.Timer.Timers;
 
 import java.lang.reflect.Field;
 import java.text.DateFormat;
