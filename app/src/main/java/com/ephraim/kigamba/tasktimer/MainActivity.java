@@ -1,4 +1,4 @@
-package com.synappze.stoptimer;
+package com.ephraim.kigamba.tasktimer;
 
 import android.app.AlertDialog;
 import android.app.LocalActivityManager;
@@ -29,8 +29,8 @@ import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.Toast;
 
-import com.synappze.stoptimer.Stopwatch.Stopwatches;
-import com.synappze.stoptimer.Timer.Timers;
+import com.ephraim.kigamba.tasktimer.Stopwatch.Stopwatches;
+import com.ephraim.kigamba.tasktimer.Timer.Timers;
 
 import java.io.BufferedReader;
 import java.io.DataInputStream;

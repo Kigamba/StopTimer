@@ -1,4 +1,4 @@
-package com.synappze.stoptimer;
+package com.ephraim.kigamba.tasktimer;
 
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
@@ -8,7 +8,6 @@ import android.preference.Preference;
 import android.preference.Preference.OnPreferenceClickListener;
 import android.preference.PreferenceActivity;
 import android.text.InputType;
-import android.view.WindowManager;
 
 public class PreferencesActivity extends PreferenceActivity {
     @Override

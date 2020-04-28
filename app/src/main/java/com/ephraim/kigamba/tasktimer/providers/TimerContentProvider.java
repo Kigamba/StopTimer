@@ -1,4 +1,4 @@
-package com.synappze.stoptimer.providers;
+package com.ephraim.kigamba.tasktimer.providers;
 
 import java.util.HashMap;
 
@@ -15,7 +15,7 @@ import android.database.sqlite.SQLiteQueryBuilder;
 import android.net.Uri;
 
 import com.synappze.stoptimer.R;
-import com.synappze.stoptimer.Timer.Timers;
+import com.ephraim.kigamba.tasktimer.Timer.Timers;
 
 
 public class TimerContentProvider extends ContentProvider {
@@ -28,7 +28,7 @@ public class TimerContentProvider extends ContentProvider {
 
     private static final String TABLE_NAME = "timers";
 
-    public static final String AUTHORITY = "com.synappze.stoptimer.providers.TimerContentProvider";
+    public static final String AUTHORITY = "com.ephraim.kigamba.tasktimer.providers.TimerContentProvider";
 
     private static final UriMatcher sUriMatcher;
 

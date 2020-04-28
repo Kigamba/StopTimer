@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.synappze.stoptimer"
-    android:sharedUserId="com.synappze.apps"
+    package="com.ephraim.kigamba.tasktimer"
+    android:sharedUserId="com.ephraim.kigamba.tasktimer.apps"
     android:sharedUserLabel="@string/shared_user_label"
     android:versionCode="4"
     android:versionName="@string/app_version_name">
@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.synappze.stoptimer.MainActivity"
+            android:name=".MainActivity"
             android:launchMode="singleTop"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -22,26 +22,26 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.synappze.stoptimer.StopwatchActivity"
+            android:name=".StopwatchActivity"
             android:launchMode="singleTop" />
         <activity
-            android:name="com.synappze.stoptimer.TimerActivity"
+            android:name=".TimerActivity"
             android:launchMode="singleTop" />
         <activity
-            android:name="com.synappze.stoptimer.PreferencesActivity"
+            android:name=".PreferencesActivity"
             android:launchMode="singleTop" />
 
         <provider
-            android:name="com.synappze.stoptimer.providers.StopwatchContentProvider"
-            android:authorities="com.synappze.stoptimer.providers.StopwatchContentProvider" />
+            android:name=".providers.StopwatchContentProvider"
+            android:authorities="com.ephraim.kigamba.tasktimer.providers.StopwatchContentProvider" />
         <provider
-            android:name="com.synappze.stoptimer.providers.TimerContentProvider"
-            android:authorities="com.synappze.stoptimer.providers.TimerContentProvider" />
+            android:name=".providers.TimerContentProvider"
+            android:authorities="com.ephraim.kigamba.tasktimer.providers.TimerContentProvider" />
 
-        <receiver android:name="com.synappze.stoptimer.receivers.TimerExpiryBroadcastReceiver" />
-        <receiver android:name="com.synappze.stoptimer.MainActivity$MainActivityBroadcastReceiver" />
-        <receiver android:name="com.synappze.stoptimer.TimerActivity$TimerActivityBroadcastReceiver" />
-        <receiver android:name="com.synappze.stoptimer.receivers.BootCompletedReceiver">
+        <receiver android:name=".receivers.TimerExpiryBroadcastReceiver" />
+        <receiver android:name=".MainActivity$MainActivityBroadcastReceiver" />
+        <receiver android:name=".TimerActivity$TimerActivityBroadcastReceiver" />
+        <receiver android:name=".receivers.BootCompletedReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>

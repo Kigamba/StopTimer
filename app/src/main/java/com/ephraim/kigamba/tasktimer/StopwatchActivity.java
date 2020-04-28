@@ -1,4 +1,4 @@
-package com.synappze.stoptimer;
+package com.ephraim.kigamba.tasktimer;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -31,7 +31,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.synappze.stoptimer.Stopwatch.Stopwatches;
+import com.ephraim.kigamba.tasktimer.Stopwatch.Stopwatches;
 
 public class StopwatchActivity extends Activity implements OnClickListener {
 

@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23.0.3"
 
     defaultConfig {
-        applicationId "com.synappze.stoptimer"
+        applicationId "com.ephraim.kigamba.tasktimer"
         minSdkVersion 15
         targetSdkVersion 23
     }

@@ -4,7 +4,7 @@
     <string name="app_name">StopTimer</string>
     <string name="app_version_name">1.2.0</string>
     <string name="date_time_format">hh:mm:ssa MM/dd/yyyy</string>
-    <string name="shared_user_label">SynAppze</string>
+    <string name="shared_user_label">Task Timers</string>
 
     <string name="timerDefaultVibratePrefDefaultValue">true</string>
     <string name="timerDefaultNumBeepsPrefDefaultValue">3</string>

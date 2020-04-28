@@ -1,4 +1,4 @@
-package com.synappze.stoptimer.providers;
+package com.ephraim.kigamba.tasktimer.providers;
 
 import java.util.HashMap;
 
@@ -13,26 +13,27 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteQueryBuilder;
 import android.net.Uri;
-import android.provider.BaseColumns;
+
+import com.ephraim.kigamba.tasktimer.Stopwatch.Stopwatches;
 
 
-public class MiscContentProvider extends ContentProvider {
+public class StopwatchContentProvider extends ContentProvider {
 
-    //private static final String TAG = "MiscContentProvider";
+    //private static final String TAG = "StopwatchContentProvider";
 
-    private static final String DATABASE_NAME = "misc.db";
+    private static final String DATABASE_NAME = "stopwatches.db";
 
     private static final int DATABASE_VERSION = 1;
 
-    private static final String TABLE_NAME = "misc";
+    private static final String TABLE_NAME = "stopwatches";
 
-    public static final String AUTHORITY = "com.synappze.stoptimer.providers.MiscContentProvider";
+    public static final String AUTHORITY = "com.ephraim.kigamba.tasktimer.providers.StopwatchContentProvider";
 
     private static final UriMatcher sUriMatcher;
 
-    private static final int MISC = 1;
+    private static final int STOPWATCHES = 1;
 
-    public static HashMap<String, String> miscProjectionMap;
+    public static HashMap<String, String> stopWatchesProjectionMap;
 
     private static class DatabaseHelper extends SQLiteOpenHelper {
 
@@ -43,9 +44,11 @@ public class MiscContentProvider extends ContentProvider {
         @Override
         public void onCreate(SQLiteDatabase db) {
             db.execSQL("CREATE TABLE " + TABLE_NAME 
-            		+ " ( " + Misc.MISC_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," 
-            		+        Misc.FIELD + " VARCHAR(255), "
-            		+        Misc.VALUE + " VARCHAR(255) "
+            		+ " ( " + Stopwatches.STOPWATCH_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," 
+            		+        Stopwatches.TITLE + " VARCHAR(255), "
+            		+        Stopwatches.START_TIME + " INTEGER, "
+            		+        Stopwatches.STOP_TIME + " INTEGER, "
+            		+        Stopwatches.RUNNING + " BOOLEAN "
                     + " ); ");
         }
 
@@ -63,7 +66,7 @@ public class MiscContentProvider extends ContentProvider {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         int count;
         switch (sUriMatcher.match(uri)) {
-            case MISC:
+            case STOPWATCHES:
                 count = db.delete(TABLE_NAME, where, whereArgs);
                 break;
 
@@ -78,8 +81,8 @@ public class MiscContentProvider extends ContentProvider {
     @Override
     public String getType(Uri uri) {
         switch (sUriMatcher.match(uri)) {
-            case MISC:
-                return Misc.CONTENT_TYPE;
+            case STOPWATCHES:
+                return Stopwatches.CONTENT_TYPE;
 
             default:
                 throw new IllegalArgumentException("Unknown URI " + uri);
@@ -88,7 +91,7 @@ public class MiscContentProvider extends ContentProvider {
 
     @Override
     public Uri insert(Uri uri, ContentValues initialValues) {
-        if (sUriMatcher.match(uri) != MISC) { throw new IllegalArgumentException("Unknown URI " + uri); }
+        if (sUriMatcher.match(uri) != STOPWATCHES) { throw new IllegalArgumentException("Unknown URI " + uri); }
 
         ContentValues values;
         if (initialValues != null) {
@@ -100,7 +103,7 @@ public class MiscContentProvider extends ContentProvider {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         long rowId = db.insert(TABLE_NAME, null, values);
         if (rowId > 0) {
-            Uri stopWatchesUri = ContentUris.withAppendedId(Misc.CONTENT_URI, rowId);
+            Uri stopWatchesUri = ContentUris.withAppendedId(Stopwatches.CONTENT_URI, rowId);
             getContext().getContentResolver().notifyChange(stopWatchesUri, null);
             return stopWatchesUri;
         }
@@ -119,9 +122,9 @@ public class MiscContentProvider extends ContentProvider {
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
 
         switch (sUriMatcher.match(uri)) {
-            case MISC:
+            case STOPWATCHES:
                 qb.setTables(TABLE_NAME);
-                qb.setProjectionMap(miscProjectionMap);
+                qb.setProjectionMap(stopWatchesProjectionMap);
                 break;
 
             default:
@@ -140,7 +143,7 @@ public class MiscContentProvider extends ContentProvider {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         int count;
         switch (sUriMatcher.match(uri)) {
-            case MISC:
+            case STOPWATCHES:
                 count = db.update(TABLE_NAME, values, where, whereArgs);
                 break;
 
@@ -154,30 +157,14 @@ public class MiscContentProvider extends ContentProvider {
 
     static {
         sUriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
-        sUriMatcher.addURI(AUTHORITY, TABLE_NAME, MISC);
+        sUriMatcher.addURI(AUTHORITY, TABLE_NAME, STOPWATCHES);
 
-        miscProjectionMap = new HashMap<String, String>();
-        miscProjectionMap.put(Misc.MISC_ID, Misc.MISC_ID);
-        miscProjectionMap.put(Misc.FIELD, Misc.FIELD);
-        miscProjectionMap.put(Misc.VALUE, Misc.VALUE);
+        stopWatchesProjectionMap = new HashMap<String, String>();
+        stopWatchesProjectionMap.put(Stopwatches.STOPWATCH_ID, Stopwatches.STOPWATCH_ID);
+        stopWatchesProjectionMap.put(Stopwatches.TITLE, Stopwatches.TITLE);
+        stopWatchesProjectionMap.put(Stopwatches.START_TIME, Stopwatches.START_TIME);
+        stopWatchesProjectionMap.put(Stopwatches.STOP_TIME, Stopwatches.STOP_TIME);
+        stopWatchesProjectionMap.put(Stopwatches.RUNNING, Stopwatches.RUNNING);
     }
-    
-	public static class Misc implements BaseColumns {
-		private Misc() {
-		}
-
-		public static final Uri CONTENT_URI = Uri.parse("content://"
-				+ MiscContentProvider.AUTHORITY + "/misc");
-
-		public static final String CONTENT_TYPE = "vnd.android.cursor.dir/vnd.synappze.stoptimer";
-		
-		public static final String MISC_ID = "_id";
-
-		public static final String FIELD = "field";
-
-	    public static final String VALUE = "value";
-
-	}
-
 }
 
