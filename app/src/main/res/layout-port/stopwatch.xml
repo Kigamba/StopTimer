@@ -1,199 +1,426 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	android:id="@+id/stopWatch" android:layout_width="fill_parent"
-	android:orientation="vertical" android:layout_height="fill_parent">
-	<LinearLayout android:layout_height="wrap_content"
-		android:gravity="center_vertical" android:id="@+id/swMainRowLinearLayout"
-		android:layout_width="fill_parent">
-		<FrameLayout android:background="@color/blur"
-			android:layout_height="wrap_content" android:layout_weight="1"
-			android:id="@+id/swFrameLayout1" android:layout_width="wrap_content">
-			<TextView android:focusable="true" android:clickable="true"
-				android:ellipsize="end" android:focusableInTouchMode="false"
-				android:textSize="20dip" android:text="Title (tap to edit)"
-				android:scrollHorizontally="true" android:layout_height="wrap_content"
-				android:textStyle="bold" android:layout_width="fill_parent"
-				android:textColor="@color/white"
-				android:background="@android:drawable/list_selector_background"
-				android:id="@+id/swTitleTextView"></TextView>
-		</FrameLayout>
-		<ProgressBar android:id="@+id/swProgressBar" android:layout_height="28dip" android:layout_width="28dip"></ProgressBar>
-	</LinearLayout>
-	<LinearLayout android:layout_height="wrap_content"
-		android:id="@+id/swMainRowEditTitleLinearLayout" android:visibility="gone"
-		android:layout_width="fill_parent">
-		<EditText android:layout_height="wrap_content"
-			android:layout_weight="1" android:id="@+id/swTitleEditText"
-			android:text="Title" android:singleLine="true" android:imeOptions="actionDone"
-			android:layout_width="wrap_content">
-			<requestFocus></requestFocus>
-		</EditText>
-	</LinearLayout>
-	<LinearLayout android:layout_height="wrap_content" android:layout_width="fill_parent" android:gravity="center">
-		<ImageButton android:id="@+id/swXButton" android:src="@drawable/delete"
-			android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageButton>
-		<ImageButton android:id="@+id/swAddButton" android:src="@drawable/add"
-			android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageButton>
-	</LinearLayout>
-	<LinearLayout android:layout_height="wrap_content"
-		android:layout_weight="1" android:id="@+id/swTimeLinearLayout"
-		android:gravity="center_vertical|center" android:layout_width="fill_parent">
-		<FrameLayout android:layout_height="fill_parent"
-			android:layout_width="wrap_content"
-			android:layout_weight="1">
-			<ImageButton android:id="@+id/swLeftImageButton"
-				android:layout_height="wrap_content" android:layout_width="32dip"
-				android:layout_gravity="left|center_vertical" android:src="@drawable/left"></ImageButton>
-		</FrameLayout>
-		<TableLayout android:orientation="horizontal"
-			android:layout_width="wrap_content" android:layout_height="wrap_content"
-			android:id="@+id/swTableLayout3" android:layout_weight="1"
-			android:gravity="center">
-			<TableRow android:layout_width="wrap_content"
-				android:layout_height="wrap_content" android:gravity="center"
-				android:id="@+id/swTableRow3">
-				<LinearLayout android:background="@drawable/time_bg"
-					android:layout_gravity="bottom" android:layout_width="wrap_content"
-					android:id="@+id/swDaysLinearLayout" android:layout_height="wrap_content"
-					android:orientation="vertical" android:paddingTop="3dip">
-					<FrameLayout android:layout_width="wrap_content"
-						android:layout_height="wrap_content">
-						<TextView android:gravity="center" android:layout_height="wrap_content"
-							android:text="00" android:textSize="30dip" android:id="@+id/swDaysBGTextView"
-							android:textColor="@color/blur" android:layout_width="wrap_content"></TextView>
-						<TextView android:gravity="center" android:layout_height="wrap_content"
-							android:text="88" android:textSize="30dip" android:id="@+id/swDaysBG2TextView"
-							android:textColor="@color/blur" android:layout_width="wrap_content"></TextView>
-						<TextView android:id="@+id/swDaysTextView"
-							android:layout_height="wrap_content" android:textSize="30dip"
-							android:textColor="@color/white" android:layout_width="wrap_content"
-							android:text="00"></TextView>
-					</FrameLayout>
-					<TextView android:id="@+id/swTextView1" android:textSize="10dip"
-						android:layout_height="wrap_content" android:layout_width="wrap_content"
-						android:layout_gravity="center" android:text="days"></TextView>
-				</LinearLayout>
-				<TextView android:layout_width="wrap_content"
-					android:layout_gravity="center" android:layout_height="wrap_content"
-					android:id="@+id/swTextView11" android:textSize="45dip"
-					android:text=":"></TextView>
-				<LinearLayout android:background="@drawable/time_bg"
-					android:layout_width="wrap_content" android:id="@+id/swHrsLinearLayout"
-					android:layout_height="wrap_content" android:orientation="vertical"
-					android:paddingTop="3dip">
-					<FrameLayout android:layout_width="wrap_content"
-						android:layout_height="wrap_content">
-						<TextView android:gravity="center" android:layout_height="wrap_content"
-							android:text="00" android:textSize="45dip" android:id="@+id/swHrsBGTextView"
-							android:textColor="@color/blur" android:layout_width="wrap_content"></TextView>
-						<TextView android:gravity="center" android:layout_height="wrap_content"
-							android:text="88" android:textSize="45dip" android:id="@+id/swHrsBG2TextView"
-							android:textColor="@color/blur" android:layout_width="wrap_content"></TextView>
-						<TextView android:id="@+id/swHrsTextView"
-							android:layout_height="wrap_content" android:textSize="45dip"
-							android:textColor="@color/white" android:layout_width="wrap_content"
-							android:text="00"></TextView>
-					</FrameLayout>
-					<TextView android:id="@+id/swTextView2"
-						android:layout_height="wrap_content" android:layout_width="wrap_content"
-						android:layout_gravity="center" android:text="hrs"></TextView>
-				</LinearLayout>
-				<TextView android:layout_width="wrap_content"
-					android:layout_gravity="center" android:layout_height="wrap_content"
-					android:id="@+id/swTextView13" android:textSize="45dip"
-					android:text=":"></TextView>
-				<LinearLayout android:background="@drawable/time_bg"
-					android:layout_width="wrap_content" android:id="@+id/swMinsLinearLayout"
-					android:layout_height="wrap_content" android:orientation="vertical"
-					android:paddingTop="3dip">
-					<FrameLayout android:layout_width="wrap_content"
-						android:layout_height="wrap_content">
-						<TextView android:gravity="center" android:layout_height="wrap_content"
-							android:text="00" android:textSize="45dip" android:id="@+id/swMinsBGTextView"
-							android:textColor="@color/blur" android:layout_width="wrap_content"></TextView>
-						<TextView android:gravity="center" android:layout_height="wrap_content"
-							android:text="88" android:textSize="45dip" android:id="@+id/swMinsBG2TextView"
-							android:textColor="@color/blur" android:layout_width="wrap_content"></TextView>
-						<TextView android:id="@+id/swMinsTextView"
-							android:layout_height="wrap_content" android:textSize="45dip"
-							android:textColor="@color/white" android:layout_width="wrap_content"
-							android:text="00"></TextView>
-					</FrameLayout>
-					<TextView android:id="@+id/swTextView3"
-						android:layout_height="wrap_content" android:layout_width="wrap_content"
-						android:layout_gravity="center" android:text="mins"></TextView>
-				</LinearLayout>
-				<TextView android:layout_width="wrap_content"
-					android:layout_gravity="center" android:layout_height="wrap_content"
-					android:id="@+id/swTextView15" android:textSize="45dip"
-					android:text=":"></TextView>
-				<LinearLayout android:background="@drawable/time_bg"
-					android:layout_width="wrap_content" android:id="@+id/swSecsLinearLayout"
-					android:layout_height="wrap_content" android:orientation="vertical"
-					android:paddingTop="3dip">
-					<FrameLayout android:layout_width="wrap_content"
-						android:layout_height="wrap_content">
-						<TextView android:gravity="center" android:layout_height="wrap_content"
-							android:text="00" android:textSize="45dip" android:id="@+id/swSecsBGTextView"
-							android:textColor="@color/blur" android:layout_width="wrap_content"></TextView>
-						<TextView android:gravity="center" android:layout_height="wrap_content"
-							android:text="88" android:textSize="45dip" android:id="@+id/swSecsBG2TextView"
-							android:textColor="@color/blur" android:layout_width="wrap_content"></TextView>
-						<TextView android:id="@+id/swSecsTextView"
-							android:layout_height="wrap_content" android:textSize="45dip"
-							android:textColor="@color/white" android:layout_width="wrap_content"
-							android:text="00"></TextView>
-					</FrameLayout>
-					<TextView android:id="@+id/swTextView4"
-						android:layout_height="wrap_content" android:layout_width="wrap_content"
-						android:layout_gravity="center" android:text="secs"></TextView>
-				</LinearLayout>
-				<TextView android:layout_width="wrap_content"
-					android:layout_gravity="center" android:layout_height="wrap_content"
-					android:id="@+id/swTextView17" android:textSize="45dip"
-					android:text="."></TextView>
-				<LinearLayout android:background="@drawable/time_bg"
-					android:layout_width="wrap_content" android:id="@+id/swTenthsLinearLayout"
-					android:layout_height="wrap_content" android:orientation="vertical"
-					android:layout_gravity="bottom" android:paddingTop="3dip">
-					<FrameLayout android:layout_width="wrap_content"
-						android:layout_height="wrap_content">
-						<TextView android:gravity="center" android:layout_height="wrap_content"
-							android:text="00" android:textSize="30dip" android:id="@+id/swTenthsBGTextView"
-							android:textColor="@color/blur" android:layout_width="wrap_content"></TextView>
-						<TextView android:gravity="center" android:layout_height="wrap_content"
-							android:text="88" android:textSize="30dip" android:id="@+id/swTenthsBG2TextView"
-							android:textColor="@color/blur" android:layout_width="wrap_content"></TextView>
-						<TextView android:id="@+id/swTenthsTextView"
-							android:layout_height="wrap_content" android:textSize="30dip"
-							android:textColor="@color/white" android:layout_width="wrap_content"
-							android:text="00"></TextView>
-					</FrameLayout>
-					<TextView android:id="@+id/swTextView5" android:textSize="10dip"
-						android:layout_height="wrap_content" android:layout_width="wrap_content"
-						android:layout_gravity="center" android:text="1/100th"></TextView>
-				</LinearLayout>
-			</TableRow>
-		</TableLayout>
-		<FrameLayout android:layout_height="fill_parent"
-			android:layout_width="wrap_content"
-			android:layout_weight="1">
-			<ImageButton android:id="@+id/swRightImageButton"
-				android:layout_height="wrap_content" android:layout_width="32dip"
-				android:layout_gravity="right|center_vertical" android:src="@drawable/right"></ImageButton>
-		</FrameLayout>
-	</LinearLayout>
-	<LinearLayout android:layout_height="wrap_content"
-		android:id="@+id/swBottomButtonsLinearLayout" android:layout_width="fill_parent">
-		<Button android:layout_height="wrap_content" android:gravity="center"
-			android:text="Start" android:drawableLeft="@drawable/ic_media_play"
-			android:id="@+id/swStartStopResumeButton" android:layout_width="0dip"
-			android:layout_weight="1"></Button>
-		<Button android:layout_height="wrap_content" android:gravity="center"
-			android:text="Reset" android:drawableLeft="@drawable/ic_menu_revert"
-			android:id="@+id/swResetButton" android:layout_weight="1"
-			android:layout_width="0dip"></Button>
-		<!--<Button android:layout_height="wrap_content" android:text="Lap " android:layout_width="wrap_content" android:id="@+id/swLapButton"></Button>-->
-	</LinearLayout>
+    android:id="@+id/stopWatch"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/swMainRowLinearLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <FrameLayout
+            android:id="@+id/swFrameLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/blur">
+
+            <TextView
+                android:id="@+id/swTitleTextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/list_selector_background"
+                android:clickable="true"
+                android:ellipsize="end"
+                android:focusable="true"
+                android:focusableInTouchMode="false"
+                android:scrollHorizontally="true"
+                android:text="Title (tap to edit)"
+                android:textColor="@color/white"
+                android:textSize="20dip"
+                android:textStyle="bold"></TextView>
+        </FrameLayout>
+
+        <ProgressBar
+            android:id="@+id/swProgressBar"
+            android:layout_width="28dip"
+            android:layout_height="28dip"></ProgressBar>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/swMainRowEditTitleLinearLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/swTitleEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
+            android:text="Title">
+
+            <requestFocus></requestFocus>
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/swXButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/delete"></ImageButton>
+
+        <ImageButton
+            android:id="@+id/swAddButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/add"></ImageButton>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/swTimeLinearLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical|center">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/swLeftImageButton"
+                android:layout_width="32dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:src="@drawable/left"></ImageButton>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/swRightImageButton"
+                android:layout_width="32dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:src="@drawable/right"></ImageButton>
+        </FrameLayout>
+
+        <TableLayout
+            android:id="@+id/swTableLayout3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TableRow
+                android:id="@+id/swTableRow3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/swDaysLinearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/time_bg"
+                    android:orientation="vertical"
+                    android:paddingTop="3dip">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/swDaysBGTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="00"
+                            android:textColor="@color/blur"
+                            android:textSize="30dip"></TextView>
+
+                        <TextView
+                            android:id="@+id/swDaysBG2TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="88"
+                            android:textColor="@color/blur"
+                            android:textSize="30dip"></TextView>
+
+                        <TextView
+                            android:id="@+id/swDaysTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="00"
+                            android:textColor="@color/white"
+                            android:textSize="30dip"></TextView>
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/swTextView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="days"
+                        android:textSize="10dip"></TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/swHrsLinearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/time_bg"
+                    android:orientation="vertical"
+                    android:paddingTop="3dip">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/swHrsBGTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="00"
+                            android:textColor="@color/blur"
+                            android:textSize="45dip"></TextView>
+
+                        <TextView
+                            android:id="@+id/swHrsBG2TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="88"
+                            android:textColor="@color/blur"
+                            android:textSize="45dip"></TextView>
+
+                        <TextView
+                            android:id="@+id/swHrsTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="00"
+                            android:textColor="@color/white"
+                            android:textSize="45dip"></TextView>
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/swTextView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="hrs"></TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/swMinsLinearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/time_bg"
+                    android:orientation="vertical"
+                    android:paddingTop="3dip">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/swMinsBGTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="00"
+                            android:textColor="@color/blur"
+                            android:textSize="45dip"></TextView>
+
+                        <TextView
+                            android:id="@+id/swMinsBG2TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="88"
+                            android:textColor="@color/blur"
+                            android:textSize="45dip"></TextView>
+
+                        <TextView
+                            android:id="@+id/swMinsTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="00"
+                            android:textColor="@color/white"
+                            android:textSize="45dip"></TextView>
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/swTextView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="mins"></TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/swSecsLinearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/time_bg"
+                    android:orientation="vertical"
+                    android:paddingTop="3dip">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/swSecsBGTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="00"
+                            android:textColor="@color/blur"
+                            android:textSize="45dip"></TextView>
+
+                        <TextView
+                            android:id="@+id/swSecsBG2TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="88"
+                            android:textColor="@color/blur"
+                            android:textSize="45dip"></TextView>
+
+                        <TextView
+                            android:id="@+id/swSecsTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="00"
+                            android:textColor="@color/white"
+                            android:textSize="45dip"></TextView>
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/swTextView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="secs"></TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/swTenthsLinearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/time_bg"
+                    android:orientation="vertical"
+                    android:paddingTop="3dip">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/swTenthsBGTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="00"
+                            android:textColor="@color/blur"
+                            android:textSize="30dip"></TextView>
+
+                        <TextView
+                            android:id="@+id/swTenthsBG2TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="88"
+                            android:textColor="@color/blur"
+                            android:textSize="30dip"></TextView>
+
+                        <TextView
+                            android:id="@+id/swTenthsTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="00"
+                            android:textColor="@color/white"
+                            android:textSize="30dip"></TextView>
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/swTextView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="1/100th"
+                        android:textSize="10dip"></TextView>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/swTextView15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text=":"
+                    android:textSize="45dip"></TextView>
+
+                <TextView
+                    android:id="@+id/swTextView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text=":"
+                    android:textSize="45dip"></TextView>
+
+                <TextView
+                    android:id="@+id/swTextView17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="."
+                    android:textSize="45dip"></TextView>
+
+                <TextView
+                    android:id="@+id/swTextView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text=":"
+                    android:textSize="45dip"></TextView>
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/swBottomButtonsLinearLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/swStartStopResumeButton"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_media_play"
+            android:gravity="center"
+            android:text="Start"></Button>
+
+        <Button
+            android:id="@+id/swResetButton"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_menu_revert"
+            android:gravity="center"
+            android:text="Reset"></Button>
+        <!--<Button android:layout_height="wrap_content" android:text="Lap " android:layout_width="wrap_content" android:id="@+id/swLapButton"></Button>-->
+    </LinearLayout>
 </LinearLayout>
