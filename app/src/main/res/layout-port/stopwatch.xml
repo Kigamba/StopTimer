@@ -32,13 +32,13 @@
                 android:text="Title (tap to edit)"
                 android:textColor="@color/white"
                 android:textSize="20dip"
-                android:textStyle="bold"></TextView>
+                android:textStyle="bold"/>
         </FrameLayout>
 
         <ProgressBar
             android:id="@+id/swProgressBar"
             android:layout_width="28dip"
-            android:layout_height="28dip"></ProgressBar>
+            android:layout_height="28dip"/>
     </LinearLayout>
 
     <LinearLayout
@@ -56,7 +56,7 @@
             android:singleLine="true"
             android:text="Title">
 
-            <requestFocus></requestFocus>
+            <requestFocus/>
         </EditText>
     </LinearLayout>
 
@@ -69,13 +69,13 @@
             android:id="@+id/swXButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/delete"></ImageButton>
+            android:src="@drawable/delete"/>
 
         <ImageButton
             android:id="@+id/swAddButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/add"></ImageButton>
+            android:src="@drawable/add"/>
     </LinearLayout>
 
     <LinearLayout
@@ -95,7 +95,7 @@
                 android:layout_width="32dip"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left|center_vertical"
-                android:src="@drawable/left"></ImageButton>
+                android:src="@drawable/left"/>
         </FrameLayout>
 
         <FrameLayout
@@ -108,7 +108,7 @@
                 android:layout_width="32dip"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right|center_vertical"
-                android:src="@drawable/right"></ImageButton>
+                android:src="@drawable/right"/>
         </FrameLayout>
 
         <TableLayout
@@ -145,7 +145,7 @@
                             android:gravity="center"
                             android:text="00"
                             android:textColor="@color/blur"
-                            android:textSize="30dip"></TextView>
+                            android:textSize="30dip"/>
 
                         <TextView
                             android:id="@+id/swDaysBG2TextView"
@@ -154,7 +154,7 @@
                             android:gravity="center"
                             android:text="88"
                             android:textColor="@color/blur"
-                            android:textSize="30dip"></TextView>
+                            android:textSize="30dip"/>
 
                         <TextView
                             android:id="@+id/swDaysTextView"
@@ -162,7 +162,7 @@
                             android:layout_height="wrap_content"
                             android:text="00"
                             android:textColor="@color/white"
-                            android:textSize="30dip"></TextView>
+                            android:textSize="30dip"/>
                     </FrameLayout>
 
                     <TextView
@@ -171,7 +171,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="days"
-                        android:textSize="10dip"></TextView>
+                        android:textSize="10dip"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -193,7 +193,7 @@
                             android:gravity="center"
                             android:text="00"
                             android:textColor="@color/blur"
-                            android:textSize="45dip"></TextView>
+                            android:textSize="45dip"/>
 
                         <TextView
                             android:id="@+id/swHrsBG2TextView"
@@ -202,7 +202,7 @@
                             android:gravity="center"
                             android:text="88"
                             android:textColor="@color/blur"
-                            android:textSize="45dip"></TextView>
+                            android:textSize="45dip"/>
 
                         <TextView
                             android:id="@+id/swHrsTextView"
@@ -210,7 +210,7 @@
                             android:layout_height="wrap_content"
                             android:text="00"
                             android:textColor="@color/white"
-                            android:textSize="45dip"></TextView>
+                            android:textSize="45dip"/>
                     </FrameLayout>
 
                     <TextView
@@ -218,7 +218,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="hrs"></TextView>
+                        android:text="hrs"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -240,7 +240,7 @@
                             android:gravity="center"
                             android:text="00"
                             android:textColor="@color/blur"
-                            android:textSize="45dip"></TextView>
+                            android:textSize="45dip"/>
 
                         <TextView
                             android:id="@+id/swMinsBG2TextView"
@@ -249,7 +249,7 @@
                             android:gravity="center"
                             android:text="88"
                             android:textColor="@color/blur"
-                            android:textSize="45dip"></TextView>
+                            android:textSize="45dip"/>
 
                         <TextView
                             android:id="@+id/swMinsTextView"
@@ -257,7 +257,7 @@
                             android:layout_height="wrap_content"
                             android:text="00"
                             android:textColor="@color/white"
-                            android:textSize="45dip"></TextView>
+                            android:textSize="45dip"/>
                     </FrameLayout>
 
                     <TextView
@@ -265,7 +265,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="mins"></TextView>
+                        android:text="mins"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -287,7 +287,7 @@
                             android:gravity="center"
                             android:text="00"
                             android:textColor="@color/blur"
-                            android:textSize="45dip"></TextView>
+                            android:textSize="45dip"/>
 
                         <TextView
                             android:id="@+id/swSecsBG2TextView"
@@ -296,7 +296,7 @@
                             android:gravity="center"
                             android:text="88"
                             android:textColor="@color/blur"
-                            android:textSize="45dip"></TextView>
+                            android:textSize="45dip"/>
 
                         <TextView
                             android:id="@+id/swSecsTextView"
@@ -304,7 +304,7 @@
                             android:layout_height="wrap_content"
                             android:text="00"
                             android:textColor="@color/white"
-                            android:textSize="45dip"></TextView>
+                            android:textSize="45dip"/>
                     </FrameLayout>
 
                     <TextView
@@ -312,7 +312,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="secs"></TextView>
+                        android:text="secs"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -335,7 +335,7 @@
                             android:gravity="center"
                             android:text="00"
                             android:textColor="@color/blur"
-                            android:textSize="30dip"></TextView>
+                            android:textSize="30dip"/>
 
                         <TextView
                             android:id="@+id/swTenthsBG2TextView"
@@ -344,7 +344,7 @@
                             android:gravity="center"
                             android:text="88"
                             android:textColor="@color/blur"
-                            android:textSize="30dip"></TextView>
+                            android:textSize="30dip"/>
 
                         <TextView
                             android:id="@+id/swTenthsTextView"
@@ -352,7 +352,7 @@
                             android:layout_height="wrap_content"
                             android:text="00"
                             android:textColor="@color/white"
-                            android:textSize="30dip"></TextView>
+                            android:textSize="30dip"/>
                     </FrameLayout>
 
                     <TextView
@@ -361,7 +361,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="1/100th"
-                        android:textSize="10dip"></TextView>
+                        android:textSize="10dip"/>
                 </LinearLayout>
 
                 <TextView
@@ -370,7 +370,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text=":"
-                    android:textSize="45dip"></TextView>
+                    android:textSize="45dip"/>
 
                 <TextView
                     android:id="@+id/swTextView13"
@@ -378,7 +378,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text=":"
-                    android:textSize="45dip"></TextView>
+                    android:textSize="45dip"/>
 
                 <TextView
                     android:id="@+id/swTextView17"
@@ -386,7 +386,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="."
-                    android:textSize="45dip"></TextView>
+                    android:textSize="45dip"/>
 
                 <TextView
                     android:id="@+id/swTextView11"
@@ -394,7 +394,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text=":"
-                    android:textSize="45dip"></TextView>
+                    android:textSize="45dip"/>
             </TableRow>
         </TableLayout>
     </LinearLayout>
@@ -411,7 +411,7 @@
             android:layout_weight="1"
             android:drawableLeft="@drawable/ic_media_play"
             android:gravity="center"
-            android:text="Start"></Button>
+            android:text="Start"/>
 
         <Button
             android:id="@+id/swResetButton"
@@ -420,7 +420,7 @@
             android:layout_weight="1"
             android:drawableLeft="@drawable/ic_menu_revert"
             android:gravity="center"
-            android:text="Reset"></Button>
+            android:text="Reset"/>
         <!--<Button android:layout_height="wrap_content" android:text="Lap " android:layout_width="wrap_content" android:id="@+id/swLapButton"></Button>-->
     </LinearLayout>
 </LinearLayout>
