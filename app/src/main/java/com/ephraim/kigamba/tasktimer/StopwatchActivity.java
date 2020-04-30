@@ -705,6 +705,7 @@ public class StopwatchActivity extends Activity implements OnClickListener {
 		case R.id.swTitleTextView:
 			stopwatch2UI.swTitleEditText.requestFocus();
 			stopwatch2UI.swTitleEditText.requestFocusFromTouch();
+			stopwatch2UI.swTitleEditText.selectAll();
 			stopwatch2UI.swMainRowLinearLayout.setVisibility(View.GONE);
 			stopwatch2UI.swMainRowEditTitleLinearLayout.setVisibility(View.VISIBLE);
 			break;
