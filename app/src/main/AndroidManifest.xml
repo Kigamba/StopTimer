@@ -2,9 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ephraim.kigamba.tasktimer"
     android:sharedUserId="com.ephraim.kigamba.tasktimer.apps"
-    android:sharedUserLabel="@string/shared_user_label"
-    android:versionCode="4"
-    android:versionName="@string/app_version_name">
+    android:sharedUserLabel="@string/shared_user_label">
 
     <application
         android:allowBackup="true"
