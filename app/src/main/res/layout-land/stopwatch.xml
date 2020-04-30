@@ -1,12 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	android:id="@+id/stopWatch" android:layout_width="fill_parent"
-	android:orientation="vertical"
-	android:layout_height="fill_parent">
-    <LinearLayout android:layout_height="wrap_content" android:gravity="center_vertical" android:id="@+id/swMainRowLinearLayout" android:layout_width="fill_parent">
-        <FrameLayout android:background="@color/gray" android:layout_height="wrap_content" android:layout_weight="1" android:id="@+id/swFrameLayout1" android:layout_width="wrap_content">
-            <TextView android:focusable="true"
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/stopWatch"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical">
+
+    <LinearLayout
+		android:id="@+id/swMainRowLinearLayout"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center_vertical">
+
+		<FrameLayout
+			android:id="@+id/swFrameLayout1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:background="@color/gray">
+
+			<TextView
+				android:focusable="true"
 				android:clickable="true"
 				android:ellipsize="end"
 				android:focusableInTouchMode="false"
@@ -16,75 +31,93 @@
 				android:layout_height="wrap_content"
 				android:textStyle="bold"
 				android:layout_width="fill_parent"
-				android:textColor="@color/white"
+				android:id="@+id/swTitleTextView"
 				android:background="@android:drawable/list_selector_background"
-				android:id="@+id/swTitleTextView">
-			</TextView>
-        </FrameLayout>
-        <ProgressBar
-			android:id="@+id/swProgressBar"
-			android:layout_height="35dip"
-			android:layout_width="35dip"/>
-        <ImageButton
-			android:layout_height="wrap_content"
-			android:src="@drawable/delete"
-			android:layout_width="wrap_content"
-			android:id="@+id/swXButton"/>
-        <ImageButton
-			android:layout_height="wrap_content"
-			android:src="@drawable/add"
-			android:layout_width="wrap_content"
-			android:id="@+id/swAddButton"/>
-    </LinearLayout>
-    <LinearLayout android:layout_height="wrap_content" android:id="@+id/swMainRowEditTitleLinearLayout" android:visibility="gone" android:layout_width="fill_parent">
-        <EditText android:layout_height="wrap_content" android:layout_weight="1" android:id="@+id/swTitleEditText" android:text="Title" android:singleLine="true" android:imeOptions="actionDone" android:layout_width="wrap_content">
-
-			<requestFocus />
-        </EditText>
-    </LinearLayout>
-	<LinearLayout android:layout_height="wrap_content" android:layout_weight="1"
-		android:id="@+id/swTimeLinearLayout" android:gravity="center_vertical|center" android:layout_width="fill_parent">
+				android:textColor="@color/white" />
+		</FrameLayout>
 
 		<ImageButton
+			android:id="@+id/swXButton"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/delete" />
+
+		<ImageButton
+			android:id="@+id/swAddButton"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/add" />
+
+		<ProgressBar
+			android:id="@+id/swProgressBar"
+			android:layout_width="35dip"
+			android:layout_height="35dip" />
+	</LinearLayout>
+
+	<LinearLayout
+		android:id="@+id/swMainRowEditTitleLinearLayout"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:visibility="gone">
+
+		<EditText
+			android:id="@+id/swTitleEditText"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:imeOptions="actionDone"
+			android:singleLine="true"
+			android:text="Title">
+
+		<requestFocus />
+        </EditText>
+    </LinearLayout>
+
+	<LinearLayout
+		android:id="@+id/swTimeLinearLayout"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:gravity="center_vertical|center">
+
+	<ImageButton
 			android:layout_height="wrap_content"
 			android:layout_width="32dip"
 			android:id="@+id/swLeftImageButton"
 			android:layout_gravity="left|center_vertical"
 			android:src="@drawable/left" />
-		<TableLayout android:orientation="horizontal"
-			android:layout_width="wrap_content" android:layout_height="wrap_content"
-			android:id="@+id/swTableLayout3" android:layout_weight="1" android:gravity="center">
-			<TableRow android:layout_width="wrap_content"
-				android:layout_height="wrap_content" android:gravity="center"
-				android:id="@+id/swTableRow3">
-				<LinearLayout android:background="@drawable/time_bg"
-					android:layout_width="wrap_content" android:id="@+id/swDaysLinearLayout"
-					android:layout_height="wrap_content" android:orientation="vertical" android:paddingTop="3dip">
-					<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
 
-						<TextView
-							android:gravity="center"
-							android:layout_height="wrap_content"
-							android:text="00"
-							android:textSize="55dip"
-							android:id="@+id/swDaysBGTextView"
-							android:textColor="@color/blur"
-							android:layout_width="wrap_content" />
+		<TableLayout
+			android:id="@+id/swTableLayout3"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:orientation="horizontal">
 
-						<TextView
-							android:gravity="center"
-							android:layout_height="wrap_content"
-							android:text="88"
-							android:textSize="55dip"
-							android:id="@+id/swDaysBG2TextView"
-							android:textColor="@color/blur"
-							android:layout_width="wrap_content" />
+			<TableRow
+				android:id="@+id/swTableRow3"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="center">
+
+				<LinearLayout
+					android:id="@+id/swDaysLinearLayout"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:background="@drawable/time_bg"
+					android:orientation="vertical"
+					android:paddingTop="3dip">
+
+					<FrameLayout
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content">
 
 						<TextView
 							android:id="@+id/swDaysTextView"
 							android:layout_height="wrap_content"
-							android:textSize="55dip"
 							android:textColor="@color/white"
+							android:textSize="55dip"
 							android:layout_width="wrap_content"
 							android:text="00" />
 
@@ -96,6 +129,7 @@
 						android:layout_width="wrap_content"
 						android:layout_gravity="center"
 						android:text="days" />
+
 				</LinearLayout>
 
 				<TextView
@@ -106,36 +140,44 @@
 					android:textSize="55dip"
 					android:text=":" />
 
-				<LinearLayout android:background="@drawable/time_bg"
-					android:layout_width="wrap_content" android:id="@+id/swHrsLinearLayout"
-					android:layout_height="wrap_content" android:orientation="vertical" android:paddingTop="3dip">
-					<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+				<LinearLayout
+					android:id="@+id/swHrsLinearLayout"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:background="@drawable/time_bg"
+					android:orientation="vertical"
+					android:paddingTop="3dip">
+
+					<FrameLayout
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content">
 
 						<TextView
-							android:gravity="center"
-							android:layout_height="wrap_content"
-							android:text="00"
-							android:textSize="55dip"
 							android:id="@+id/swHrsBGTextView"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:gravity="center"
+							android:text="00"
 							android:textColor="@color/blur"
-							android:layout_width="wrap_content" />
+							android:textSize="55dip" />
 
 						<TextView
-							android:gravity="center"
-							android:layout_height="wrap_content"
-							android:text="88"
-							android:textSize="55dip"
 							android:id="@+id/swHrsBG2TextView"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:gravity="center"
+							android:text="88"
 							android:textColor="@color/blur"
-							android:layout_width="wrap_content" />
+							android:textSize="55dip" />
 
 						<TextView
 							android:id="@+id/swHrsTextView"
-							android:layout_height="wrap_content"
-							android:textSize="55dip"
-							android:textColor="@color/white"
 							android:layout_width="wrap_content"
-							android:text="00" />
+							android:layout_height="wrap_content"
+							android:text="00"
+							android:textColor="@color/white"
+							android:textSize="55dip" />
+
 					</FrameLayout>
 
 					<TextView
@@ -144,6 +186,7 @@
 						android:layout_width="wrap_content"
 						android:layout_gravity="center"
 						android:text="hrs" />
+
 				</LinearLayout>
 
 				<TextView
@@ -153,12 +196,20 @@
 					android:id="@+id/swTextView13"
 					android:textSize="55dip"
 					android:text=":" />
-				<LinearLayout android:background="@drawable/time_bg"
-					android:layout_width="wrap_content" android:id="@+id/swMinsLinearLayout"
-					android:layout_height="wrap_content" android:orientation="vertical" android:paddingTop="3dip">
-					<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
 
-						<TextView
+				<LinearLayout
+					android:id="@+id/swMinsLinearLayout"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:background="@drawable/time_bg"
+					android:orientation="vertical"
+					android:paddingTop="3dip">
+
+					<FrameLayout
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content">
+
+					<TextView
 							android:gravity="center"
 							android:layout_height="wrap_content"
 							android:text="00"
@@ -183,6 +234,7 @@
 							android:textColor="@color/white"
 							android:layout_width="wrap_content"
 							android:text="00" />
+
 					</FrameLayout>
 
 					<TextView
@@ -191,6 +243,7 @@
 						android:layout_width="wrap_content"
 						android:layout_gravity="center"
 						android:text="mins" />
+
 				</LinearLayout>
 
 				<TextView
@@ -200,12 +253,20 @@
 					android:id="@+id/swTextView15"
 					android:textSize="55dip"
 					android:text=":" />
-				<LinearLayout android:background="@drawable/time_bg"
-					android:layout_width="wrap_content" android:id="@+id/swSecsLinearLayout"
-					android:layout_height="wrap_content" android:orientation="vertical" android:paddingTop="3dip">
-					<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
 
-						<TextView
+				<LinearLayout
+					android:id="@+id/swSecsLinearLayout"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:background="@drawable/time_bg"
+					android:orientation="vertical"
+					android:paddingTop="3dip">
+
+					<FrameLayout
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content">
+
+					<TextView
 							android:gravity="center"
 							android:layout_height="wrap_content"
 							android:text="00"
@@ -238,6 +299,7 @@
 						android:layout_width="wrap_content"
 						android:layout_gravity="center"
 						android:text="secs" />
+
 				</LinearLayout>
 
 				<TextView
@@ -247,13 +309,21 @@
 					android:id="@+id/swTextView17"
 					android:textSize="55dip"
 					android:text="." />
-				<LinearLayout android:background="@drawable/time_bg"
-					android:layout_width="wrap_content" android:id="@+id/swTenthsLinearLayout"
-					android:layout_height="wrap_content" android:orientation="vertical"
-					android:layout_gravity="bottom" android:paddingTop="3dip">
-					<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
 
-						<TextView
+				<LinearLayout
+					android:id="@+id/swTenthsLinearLayout"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="bottom"
+					android:background="@drawable/time_bg"
+					android:orientation="vertical"
+					android:paddingTop="3dip">
+
+					<FrameLayout
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content">
+
+					<TextView
 							android:gravity="center"
 							android:layout_height="wrap_content"
 							android:text="00"
@@ -287,6 +357,7 @@
 						android:layout_width="wrap_content"
 						android:layout_gravity="center"
 						android:text="1/100th" />
+
 				</LinearLayout>
 			</TableRow>
 		</TableLayout>
@@ -297,10 +368,15 @@
 			android:src="@drawable/right"
 			android:layout_width="32dip"
 			android:id="@+id/swRightImageButton" />
-	</LinearLayout>
-	<LinearLayout android:layout_height="wrap_content" android:id="@+id/swBottomButtonsLinearLayout" android:layout_width="fill_parent">
 
-		<Button
+	</LinearLayout>
+
+	<LinearLayout
+		android:id="@+id/swBottomButtonsLinearLayout"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+
+	<Button
 			android:layout_height="wrap_content"
 			android:gravity="center"
 			android:text="Start"
@@ -317,6 +393,6 @@
 			android:id="@+id/swResetButton"
 			android:layout_weight="1"
 			android:layout_width="0dip" />
-		<!--<Button android:layout_height="wrap_content" android:text="Lap " android:layout_width="wrap_content" android:id="@+id/swLapButton"></Button>-->
+
 	</LinearLayout>
 </LinearLayout>
