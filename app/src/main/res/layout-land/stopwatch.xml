@@ -68,10 +68,7 @@
 			android:layout_weight="1"
 			android:imeOptions="actionDone"
 			android:singleLine="true"
-			android:text="Title">
-
-		<requestFocus />
-        </EditText>
+			android:text="Title"/>
     </LinearLayout>
 
 	<LinearLayout

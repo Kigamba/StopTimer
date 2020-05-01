@@ -32,6 +32,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ephraim.kigamba.tasktimer.Stopwatch.Stopwatches;
+import com.ephraim.kigamba.tasktimer.util.Utils;
 
 public class StopwatchActivity extends Activity implements OnClickListener {
 
@@ -121,6 +122,7 @@ public class StopwatchActivity extends Activity implements OnClickListener {
    		toast = Toast.makeText(this, "", Toast.LENGTH_LONG);
 
    		setVolumeControlStream(AudioManager.STREAM_MUSIC);
+   		Utils.hideKeyboard(this);
 	}
 
 
@@ -707,6 +709,7 @@ public class StopwatchActivity extends Activity implements OnClickListener {
 			stopwatch2UI.swTitleEditText.requestFocusFromTouch();
 			stopwatch2UI.swTitleEditText.selectAll();
 			stopwatch2UI.swMainRowLinearLayout.setVisibility(View.GONE);
+            Utils.openKeyboard(this, stopwatch2UI.swTitleEditText.getWindowToken());
 			stopwatch2UI.swMainRowEditTitleLinearLayout.setVisibility(View.VISIBLE);
 			break;
 		/*case R.id.swLapButton:
