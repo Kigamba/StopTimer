@@ -42,6 +42,8 @@ public class Utils {
     }
 
     public static String formatDate(long timeInMilliseconds) {
+        timeInMilliseconds = timeInMilliseconds == 0 ? System.currentTimeMillis() : timeInMilliseconds;
+
         Calendar startTime = Calendar.getInstance();
         startTime.setTime(new Date(timeInMilliseconds));
 
