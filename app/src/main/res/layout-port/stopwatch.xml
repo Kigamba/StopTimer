@@ -54,6 +54,7 @@
             android:layout_weight="1"
             android:imeOptions="actionDone"
             android:singleLine="true"
+            android:inputType="text"
             android:text="Title"/>
 
     </LinearLayout>

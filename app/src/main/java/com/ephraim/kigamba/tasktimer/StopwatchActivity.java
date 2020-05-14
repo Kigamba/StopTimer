@@ -241,8 +241,10 @@ public class StopwatchActivity extends Activity implements OnClickListener {
 		    public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
 		        if (actionId == EditorInfo.IME_ACTION_DONE) {
 		        	saveTitle();
+					Utils.hideKeyboard(StopwatchActivity.this);
 		            return true;
 		        }
+
 		        return false;
 		    }
 		});
@@ -519,7 +521,7 @@ public class StopwatchActivity extends Activity implements OnClickListener {
 
 	public void setupDisplay(StopwatchUI ui, Stopwatch stopwatch, Handler stopwatchHandler, Runnable stopwatchUpdateTimeTask) {
 		ui.swTitleEditText.setText(stopwatch.title);
-		ui.swTitleTextView.setText(stopwatch.title);
+		ui.swTitleTextView.setText(Utils.getDisplayString(stopwatch));
 		ui.swTitleEditText.setSelection(ui.swTitleEditText.getText().length());
 		setTime(ui,stopwatch);
 		if(stopwatch.running==true) {
@@ -619,7 +621,8 @@ public class StopwatchActivity extends Activity implements OnClickListener {
 
 	private void saveTitle()
 	{
-		stopwatch2UI.swTitleTextView.setText(stopwatch2UI.swTitleEditText.getText());
+		//stopwatch2UI.swTitleTextView.setText(stopwatch2UI.swTitleEditText.getText());
+		stopwatch2UI.swTitleTextView.setText(Utils.getDisplayString(stopwatch2));
 		stopwatch2UI.swMainRowEditTitleLinearLayout.setVisibility(View.GONE);
 		stopwatch2UI.swMainRowLinearLayout.setVisibility(View.VISIBLE);
 	}
