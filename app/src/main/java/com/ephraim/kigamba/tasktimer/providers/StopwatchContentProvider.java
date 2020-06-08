@@ -166,5 +166,7 @@ public class StopwatchContentProvider extends ContentProvider {
         stopWatchesProjectionMap.put(Stopwatches.STOP_TIME, Stopwatches.STOP_TIME);
         stopWatchesProjectionMap.put(Stopwatches.RUNNING, Stopwatches.RUNNING);
     }
+
+
 }
 

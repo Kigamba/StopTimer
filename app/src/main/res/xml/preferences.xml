@@ -32,5 +32,15 @@
 			android:defaultValue="@string/screenOrientationPrefDefaultValue"
 			android:entries="@array/screenOrientationPrefArray"
 			android:entryValues="@array/screenOrientationPrefArrayValues" />
+		<SwitchPreference
+			android:key="stopwatchReminderIntervalEnabledPref"
+			android:title="Stopwatch Reminder Enabled"
+			android:summary="Is the Stopwatch Reminder Enabled"
+			android:checked="true"/>
+		<EditTextPreference android:key="stopwatchReminderIntervalPref"
+			android:title="Stopwatch Reminder Interval(Mins)"
+			android:summary="The interval between stopwatch reminder intervals"
+			android:inputType="number"
+			android:defaultValue="@string/timerDefaultNumBeepsPrefDefaultValue" />
 	</PreferenceCategory>
 </PreferenceScreen>

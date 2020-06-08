@@ -86,6 +86,8 @@ public class StopwatchActivity extends Activity implements OnClickListener {
 	public static final Uri URI = Stopwatch.Stopwatches.CONTENT_URI;
 	public static final int ACTIVITY_TAB_NUMBER = 1;
 
+	private Thread stopwatchIntervalReminderThread;
+
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -164,6 +166,12 @@ public class StopwatchActivity extends Activity implements OnClickListener {
 		stopwatch1Handler.removeCallbacks(stopwatch1UpdateTimeTask);
 		stopwatch2Handler.removeCallbacks(stopwatch2UpdateTimeTask);
 		stopwatch3Handler.removeCallbacks(stopwatch3UpdateTimeTask);
+
+		stopStopwatchIntervalReminder();
+	}
+
+	private void stopStopwatchIntervalReminder() {
+
 	}
 
 	@Override
@@ -191,9 +199,15 @@ public class StopwatchActivity extends Activity implements OnClickListener {
 		setupRealViewSwitcher();
 
 		stopwatch2UI.swTitleEditText.addTextChangedListener(titleTextWatcher);
+
+		startStopwatchIntervalReminder();
     }
 
-    private void setupStopwatchViewUI(View v, final StopwatchUI ui) {
+	private void startStopwatchIntervalReminder() {
+		//this.getContentResolver().que
+	}
+
+	private void setupStopwatchViewUI(View v, final StopwatchUI ui) {
 		ui.swTitleEditText = (EditText) v.findViewById(R.id.swTitleEditText);
 		ui.swAddButton = (ImageButton) v.findViewById(R.id.swAddButton);
 		ui.swXButton = (ImageButton) v.findViewById(R.id.swXButton);

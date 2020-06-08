@@ -13,6 +13,7 @@
     <string name="hapticFeedbackPrefDefaultValue">true</string>
     <string name="keepScreenOnPrefDefaultValue">true</string>
     <string name="screenOrientationPrefDefaultValue">0</string>
+    <string name="stopwatchReminderIntervalPrefDefaultValue">3</string>
 
 
 </resources>
