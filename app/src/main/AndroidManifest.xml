@@ -9,6 +9,7 @@
         android:icon="@drawable/icon"
         android:label="@string/app_name"
         android:supportsRtl="true"
+        android:name=".StopwatchApplication"
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
@@ -16,9 +17,11 @@
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".StopwatchActivity"
             android:launchMode="singleTop" />
@@ -28,15 +31,15 @@
         <activity
             android:name=".PreferencesActivity"
             android:launchMode="singleTop" />
-
         <provider
             android:name=".providers.StopwatchContentProvider"
             android:authorities="com.ephraim.kigamba.tasktimer.providers.StopwatchContentProvider" />
+
         <provider
             android:name=".providers.TimerContentProvider"
             android:authorities="com.ephraim.kigamba.tasktimer.providers.TimerContentProvider" />
-
         <receiver android:name=".receivers.TimerExpiryBroadcastReceiver" />
+
         <receiver android:name=".MainActivity$MainActivityBroadcastReceiver" />
         <receiver android:name=".TimerActivity$TimerActivityBroadcastReceiver" />
         <receiver android:name=".receivers.BootCompletedReceiver">
@@ -44,6 +47,9 @@
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
+        <service
+            android:name=".reminder.StopwatchIntervalReminderService"
+            android:exported="false"></service>
     </application>
 
     <uses-feature
@@ -55,12 +61,13 @@
     <uses-feature
         android:name="android.hardware.telephony"
         android:required="false" />
+
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.VIBRATE" />
-
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <uses-sdk android:minSdkVersion="15" />
+
 </manifest>
